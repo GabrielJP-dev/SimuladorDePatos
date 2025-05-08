@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\code\\atividade de patos poo\\Patos\\Patos.csproj",
+      "projectUniqueName": "C:\\poo\\atividade de patos poo\\Patos\\Patos.csproj",
       "projectName": "Patos",
-      "projectPath": "C:\\code\\atividade de patos poo\\Patos\\Patos.csproj",
+      "projectPath": "C:\\poo\\atividade de patos poo\\Patos\\Patos.csproj",
       "packagesPath": "C:\\Users\\Gabriel Paiva\\.nuget\\packages\\",
-      "outputPath": "C:\\code\\atividade de patos poo\\Patos\\obj\\",
+      "outputPath": "C:\\poo\\atividade de patos poo\\Patos\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

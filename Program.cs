@@ -2,6 +2,12 @@
 
 class Program
 {
+
+    /*fazer um menu de jogos
+criar mais 3 patos
+mostrar todos os patos e oque eles podem fazer 
+
+depois de selecionar o pato, ele vai poder soltar os poderes a vontade.*/
     static void Main(string[] args)
     {
 
