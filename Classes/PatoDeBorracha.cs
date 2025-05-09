@@ -1,4 +1,9 @@
 public class PatoDeBorracha : Pato, Quack {
+
+    public PatoDeBorracha() {
+        Nome = "PatoDeBorracha";
+       
+    }
     public override void Mostrar()
     {
         base.Mostrar();

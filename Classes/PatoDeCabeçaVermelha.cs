@@ -1,4 +1,9 @@
 public class PatoDeCabeçaVermelha : Pato, Voar {
+
+    public PatoDeCabeçaVermelha() {
+        Nome = "PatoDeCabeçaVermelha";
+       
+    }
     public override void Mostrar()
     {
         base.Mostrar();

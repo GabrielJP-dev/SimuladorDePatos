@@ -1,3 +1,5 @@
 public interface ITeleport{
-    public virtual void Teleport(){}
+    public virtual void Teleport(){
+        Console.WriteLine("TELEPORTANDO");
+    }
 }

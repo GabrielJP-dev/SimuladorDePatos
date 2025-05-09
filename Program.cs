@@ -11,30 +11,119 @@ depois de selecionar o pato, ele vai poder soltar os poderes a vontade.*/
     static void Main(string[] args)
     {
 
-         Console.WriteLine("PATO DE BORRACHA AMARELINHO");
+      List<Pato> Patos = new List<Pato>{
+        new CyberDuck(),
+        new GodDuck(),
+        new EchoWarriorDuck(),
+        new KnightDuck(),
+        new PatoDeBorracha(),
+        new PatoDeCabeçaVermelha(),
+        new PatoReal(),
+        new RocketDuck(),
+        new RubberNinjaDuck(),
+        new StealthDuck()
 
-        PatoDeBorracha amarelinho = new PatoDeBorracha();
+      };
 
-        amarelinho.Mostrar();
-        amarelinho.Nadar();
-        amarelinho.falar();
+     int escolha;
+        do
+        {
+            Console.Clear();
+            Console.WriteLine("=== 🦆 MENU DE PATOS ===");
+            for (int i = 0; i < Patos.Count; i++)
+            {
+                Console.WriteLine($"{i + 1}. {Patos[i].Nome}");
+            }
+            Console.WriteLine("0. Sair");
 
-        Console.WriteLine("SOU UM PATINHO REAL");
+            Console.Write("\nEscolha um pato: ");
+            string? entrada = Console.ReadLine();
+            if (!int.TryParse(entrada, out escolha) || escolha < 0 || escolha > Patos.Count)
+            {
+                Console.WriteLine("❌ Entrada inválida. Pressione Enter para continuar...");
+                Console.ReadLine();
+                continue;
+            }
 
-        PatoReal rei = new PatoReal();
+            if (escolha == 0) break;
 
-        rei.Mostrar();
-        rei.Nadar();
+            Pato patoSelecionado = Patos[escolha - 1];
 
-        Console.WriteLine("SOU UM PATO DE CABEÇA VERMELHA");
+            int poderEscolhido;
+            do
+            {
+                Console.Clear();
+                Console.WriteLine($"🐤 {patoSelecionado.Nome} — Poderes disponíveis:\n");
 
+                int index = 1;
+                var poderes = new List<Action>();
 
-        PatoDeCabeçaVermelha foguinho = new PatoDeCabeçaVermelha();
+                if (patoSelecionado is Voar f)
+                {
+                    Console.WriteLine($"{index}. Voar");
+                    poderes.Add(() => f.voando());
+                    index++;
+                }
 
-        foguinho.Mostrar();
-        foguinho.Nadar();
-        foguinho.voando();
+                if (patoSelecionado is Quack q)
+                {
+                    Console.WriteLine($"{index}. Grasnar");
+                    poderes.Add(() => q.falar());
+                    index++;
+                }
 
+                if (patoSelecionado is IInvisibility inv)
+                {
+                    Console.WriteLine($"{index}. Ficar Invisível");
+                    poderes.Add(() => inv.Invisível());
+                    index++;
+                }
+
+                if (patoSelecionado is ILaserEyes laser)
+                {
+                    Console.WriteLine($"{index}. Laser nos Olhos");
+                    poderes.Add(() => laser.ILaserEyes());
+                    index++;
+                }
+
+                if (patoSelecionado is IShieldWings shield)
+                {
+                    Console.WriteLine($"{index}. Asas Escudo");
+                    poderes.Add(() => shield.ShieldWings());
+                    index++;
+                }
+
+                if (patoSelecionado is ITeleport tp)
+                {
+                    Console.WriteLine($"{index}. Teleporte");
+                    poderes.Add(() => tp.Teleport());
+                    index++;
+                }
+
+                Console.WriteLine("0. Voltar");
+
+                Console.Write("\nEscolha o poder a usar: ");
+                string? entradaPoder = Console.ReadLine();
+                if (!int.TryParse(entradaPoder, out poderEscolhido) || poderEscolhido < 0 || poderEscolhido > poderes.Count)
+                {
+                    Console.WriteLine("❌ Entrada inválida. Pressione Enter para continuar...");
+                    Console.ReadLine();
+                    continue;
+                }
+
+                if (poderEscolhido == 0) break;
+
+                Console.WriteLine();
+                poderes[poderEscolhido - 1].Invoke();
+
+                Console.WriteLine("\n✅ Poder usado! Pressione Enter para continuar...");
+                Console.ReadLine();
+
+            } while (poderEscolhido != 0);
+
+        } while (escolha != 0);
+
+        Console.WriteLine("\nPrograma finalizado. Até mais!");
      
     }
 }

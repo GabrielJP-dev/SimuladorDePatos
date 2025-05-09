@@ -1,3 +1,5 @@
 public interface IInvisibility{
-    public virtual void Teleport(){}
+    public virtual void Invisível(){
+        Console.WriteLine("FURTIVIDADE");
+    }
 }
