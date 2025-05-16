@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Patos")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+748c923a3c6b93bed4fef7e92f0b913d37c81070")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9416ff3b4d596329482f66ef6b12ff477f2385a3")]
 [assembly: System.Reflection.AssemblyProductAttribute("Patos")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Patos")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
